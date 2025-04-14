@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronisio Maia Projetista - Projetos 3D para Marcenarias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F5F5F5;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .primary-bg {
+            background-color: #1C355E;
+        }
+        .primary-text {
+            color: #1C355E;
+        }
+        .secondary-bg {
+            background-color: #F57C00;
+        }
+        .secondary-text {
+            color: #F57C00;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #25D366;
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #F57C00;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="primary-bg text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-ruler-combined text-2xl mr-2"></i>
+                <h1 class="text-xl font-bold">Ronisio Maia Projetista</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#orcaplaner" class="nav-link">ORÇAPLANER</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+            <button class="md:hidden text-xl" id="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden primary-bg w-full px-4 py-2" id="mobile-menu">
+            <a href="#home" class="block py-2 border-b border-gray-600">Início</a>
+            <a href="#services" class="block py-2 border-b border-gray-600">Serviços</a>
+            <a href="#portfolio" class="block py-2 border-b border-gray-600">Portfólio</a>
+            <a href="#orcaplaner" class="block py-2 border-b border-gray-600">ORÇAPLANER</a>
+            <a href="#about" class="block py-2 border-b border-gray-600">Sobre</a>
+            <a href="#contact" class="block py-2">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 md:py-24 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6">Projetos 3D Profissionais para Marcenarias de Alto Nível</h1>
+                <p class="text-lg mb-8">Bem-vindo ao meu escritório de projetos! Sou Ronisio Maia, especialista em criação de projetos 3D técnicos e comerciais para marcenarias e fábricas de móveis planejados, com mais de 15 anos de experiência no mercado.</p>
+                <p class="text-lg mb-8">Atendo marceneiros, designers e fabricantes que buscam qualidade, precisão e agilidade em seus projetos.</p>
+                <a href="https://bit.ly/m/ronisiomaia_projetos" target="_blank" class="whatsapp-btn inline-flex items-center px-6 py-3 rounded-lg bg-green-500 text-white font-bold text-lg">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Fale agora comigo pelo WhatsApp
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1583845112209-5eb7f1a5a12c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de móvel planejado" class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">Soluções Inteligentes em Projetos Planejados</h2>
+                <div class="w-24 h-1 secondary-bg mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <div class="secondary-text text-4xl mb-4">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 primary-text">Projetos Completos</h3>
+                    <p class="text-gray-700">Projetos para clientes finais e lojas de móveis planejados, com desenvolvimento técnico completo no Promob Plus.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <div class="secondary-text text-4xl mb-4">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 primary-text">Renderizações</h3>
+                    <p class="text-gray-700">Imagens realistas que ajudam seu cliente a visualizar o projeto finalizado antes mesmo da produção começar.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <div class="secondary-text text-4xl mb-4">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 primary-text">Listagem de Materiais</h3>
+                    <p class="text-gray-700">Listagem completa de materiais pronta para produção, com todas as especificações técnicas necessárias.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <div class="secondary-text text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 primary-text">Suporte Técnico</h3>
+                    <p class="text-gray-700">Acompanhamento e suporte em cada etapa do projeto, garantindo que tudo saia exatamente como planejado.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xl font-semibold primary-text mb-6">Projetos sob medida. Resultado garantido.</p>
+                <a href="#contact" class="secondary-bg text-white px-8 py-3 rounded-lg font-bold text-lg inline-block hover:bg-orange-600 transition">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">Portfólio de Projetos</h2>
+                <div class="w-24 h-1 secondary-bg mx-auto"></div>
+                <p class="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">Confira alguns dos projetos que já desenvolvemos para marcenarias de todo o Brasil. Cada imagem representa não só um móvel, mas a realização de um sonho planejado com técnica e arte.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Items -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de cozinha planejada" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Cozinha Moderna</h3>
+                        <p class="text-gray-600">Projeto completo em Promob para residência em São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1583845112171-1dc473cc9345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de closet planejado" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Closet Premium</h3>
+                        <p class="text-gray-600">Sistema de armários para quarto principal com iluminação LED</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1556905050-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de home office" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Home Office</h3>
+                        <p class="text-gray-600">Mobiliário corporativo para trabalho remoto</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1583845112209-5eb7f1a5a12c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de sala de estar" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Sala de Estar</h3>
+                        <p class="text-gray-600">Painel de TV com armários e prateleiras integradas</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de banheiro" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Banheiro Moderno</h3>
+                        <p class="text-gray-600">Mobiliário para banheiro com acabamento em MDF lacado</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1583845112165-8c4a8b9c9b0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Projeto de lavanderia" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold primary-text text-lg">Lavanderia Compacta</h3>
+                        <p class="text-gray-600">Solução inteligente para espaços reduzidos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://bit.ly/m/ronisiomaia_projetos" target="_blank" class="whatsapp-btn inline-flex items-center px-6 py-3 rounded-lg bg-green-500 text-white font-bold text-lg">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Quer um projeto como esses? Fale comigo!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORÇAPLANER Section -->
+    <section id="orcaplaner" class="py-16 primary-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Transforme Seus Projetos em Orçamentos Profissionais com o ORÇAPLANER</h2>
+                <div class="w-24 h-1 secondary-bg mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <p class="text-lg mb-6">O ORÇAPLANER é um sistema exclusivo desenvolvido para marceneiros e fabricantes de móveis planejados, que transforma suas listagens do PROMOB em orçamentos completos e organizados.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="secondary-text text-xl mr-3 mt-1">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Recalcula e classifica os materiais por categoria</h3>
+                                <p>Organiza automaticamente todos os componentes do seu projeto.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="secondary-text text-xl mr-3 mt-1">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Aplica automaticamente percentuais de mão de obra</h3>
+                                <p>Configuração personalizada dos seus valores de fabricação.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="secondary-text text-xl mr-3 mt-1">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Gera uma planilha com orçamento claro e profissional</h3>
+                                <p>Documento pronto para apresentação ao cliente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="secondary-text text-xl mr-3 mt-1">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Ganha agilidade, organização e confiança na hora da venda</h3>
+                                <p>Processo de orçamentação otimizado e sem erros.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://youtu.be/537mHVFd3fw" target="_blank" class="secondary-bg hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-bold text-center transition flex items-center justify-center">
+                            <i class="fas fa-play-circle mr-2 text-xl"></i> Assista a demonstração
+                        </a>
+                        <a href="https://bit.ly/OrcaplanerCadastrarEmpresa" target="_blank" class="bg-white hover:bg-gray-100 primary-text px-6 py-3 rounded-lg font-bold text-center transition flex items-center justify-center">
+                            <i class="fas fa-user-plus mr-2 text-xl"></i> Cadastre sua marcenaria
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema ORÇAPLANER" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 primary-text">
+                            <h3 class="text-xl font-bold mb-2">ORÇAPLANER em Ação</h3>
+                            <p class="text-gray-600">Veja como o sistema transforma sua listagem do Promob em um orçamento profissional em poucos cliques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/3 mb-10 lg:mb-0 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ronisio Maia" class="rounded-lg shadow-xl w-64 h-64 object-cover">
+                        <div class="absolute -bottom-5 -right-5 bg-white p-2 rounded-full shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Pedro Henrique" class="rounded-full w-16 h-16 object-cover border-2 border-white">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/3 lg:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold primary-text mb-6">Sobre Nós</h2>
+                    <p class="text-lg mb-6">Meu nome é Ronisio Maia, sou projetista profissional e fundador do sistema ORÇAPLANER. Atuo ao lado do meu filho Pedro Henrique, com quem formo uma parceria de técnica, criatividade e visão de negócio.</p>
+                    <p class="text-lg mb-6">Com mais de 15 anos de experiência no mercado de projetos para marcenaria, já auxiliei centenas de profissionais a elevar o padrão de seus trabalhos através de projetos técnicos precisos e soluções inteligentes.</p>
+                    <p class="text-lg mb-8">Nosso propósito é elevar o padrão das marcenarias brasileiras, oferecendo soluções reais para projeto, orçamento e organização do processo produtivo.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <div class="secondary-text mr-3">
+                                <i class="fas fa-award text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold primary-text">15+ Anos</p>
+                                <p class="text-sm text-gray-600">de experiência</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <div class="secondary-text mr-3">
+                                <i class="fas fa-project-diagram text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold primary-text">500+ Projetos</p>
+                                <p class="text-sm text-gray-600">executados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <div class="secondary-text mr-3">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold primary-text">100+ Clientes</p>
+                                <p class="text-sm text-gray-600">satisfeitos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 secondary-bg mx-auto"></div>
+                <p class="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">Estamos prontos para transformar suas ideias em projetos incríveis. Fale conosco agora mesmo!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block primary-text font-bold mb-2">Seu Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block primary-text font-bold mb-2">Seu E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block primary-text font-bold mb-2">Telefone/WhatsApp</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block primary-text font-bold mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="secondary-bg hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-bold w-full transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold primary-text mb-6">Outras Formas de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="secondary-text text-2xl mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">WhatsApp</h4>
+                                    <a href="https://bit.ly/m/ronisiomaia_projetos" target="_blank" class="text-gray-700 hover:text-blue-600">bit.ly/m/ronisiomaia_projetos</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="secondary-text text-2xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">E-mail</h4>
+                                    <a href="mailto:ronisio.projetista@gmail.com" class="text-gray-700 hover:text-blue-600">ronisio.projetista@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="secondary-text text-2xl mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">Localização</h4>
+                                    <p class="text-gray-700">Atendemos todo o Brasil via projetos remotos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="secondary-text text-2xl mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">Horário de Atendimento</h4>
+                                    <p class="text-gray-700">Segunda a Sexta: 8h às 18h</p>
+                                    <p class="text-gray-700">Sábado: 8h às 12h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-bold primary-text mb-4">Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="secondary-text hover:text-orange-600 text-2xl">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="secondary-text hover:text-orange-600 text-2xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="secondary-text hover:text-orange-600 text-2xl">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="secondary-text hover:text-orange-600 text-2xl">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="primary-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-ruler-combined text-2xl mr-2"></i>
+                        <h2 class="text-xl font-bold">Ronisio Maia Projetista</h2>
+                    </div>
+                    <p class="text-gray-300 mt-2">Projetos 3D técnicos e comerciais para marcenarias</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-orange-300">Início</a>
+                    <a href="#services" class="hover:text-orange-300">Serviços</a>
+                    <a href="#orcaplaner" class="hover:text-orange-300">ORÇAPLANER</a>
+                    <a href="#contact" class="hover:text-orange-300">Contato</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2023 Ronisio Maia Projetista. Todos os direitos reservados.</p>
+                <p class="mt-2">Desenvolvido com <i class="fas fa-heart text-red-400"></i> para marceneiros brasileiros</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://bit.ly/m/ronisiomaia_projetos" target="_blank" class="fixed bottom-6 right-6 whatsapp-btn flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white text-2xl shadow-xl hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+            });
+        }
+
+        // Gallery lightbox (example functionality)
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').src;
+                // In a real implementation, you would open a lightbox here
+                console.log('Opening image:', imgSrc);
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Ronisio/ronisio-ronisiomaiaprojetos" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
