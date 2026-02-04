@@ -1,0 +1,202 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f4f6fb;
+  color: #1b1c1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #101827;
+  color: #fff;
+  padding: 24px;
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar a.active {
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card,
+.table-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.piece-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button.primary {
+  background: #2f80ed;
+  color: #fff;
+}
+
+button.danger {
+  background: #d92d20;
+  color: #fff;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px dashed #94a3b8;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2f80ed;
+  cursor: pointer;
+}
+
+.link-button.danger {
+  color: #d92d20;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-card th,
+.table-card td {
+  text-align: left;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.status-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #2f80ed, #9b51e0);
+}
+
+.login-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  width: min(420px, 90%);
+  display: grid;
+  gap: 16px;
+}
+
+.login-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.error {
+  color: #d92d20;
+}
+
+.google-button {
+  background: #f4f6fb;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
